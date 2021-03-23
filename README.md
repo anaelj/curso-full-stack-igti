@@ -7,4 +7,4 @@ Repositório criado para o bootcamp IGTI => Full Stack ReactJS + NodeJS
   - readline
   - events
   - http
-   - yarn add nodemon -g
+    yarn add nodemon -g
