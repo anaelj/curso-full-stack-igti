@@ -1,6 +1,5 @@
 import express from "express";
 import { promises as fs, read, writeFileSync } from "fs";
-import cors from "cors";
 
 const { readFile, writeFile } = fs;
 

@@ -12,3 +12,6 @@ Repositório criado para o bootcamp IGTI => Full Stack ReactJS + NodeJS
   - middlewares
   - tratamento de erros
   - logs
+  - api Bank
+  - cors
+  - swagger
