@@ -10,3 +10,5 @@ Repositório criado para o bootcamp IGTI => Full Stack ReactJS + NodeJS
     yarn add nodemon -g
   - express  
   - middlewares
+  - tratamento de erros
+  - logs
