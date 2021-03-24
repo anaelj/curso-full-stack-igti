@@ -2,7 +2,7 @@
 Repositório criado para o bootcamp IGTI => Full Stack ReactJS + NodeJS
 
 
-## Módulos do nodeJS
+## NodeJS
   - fs
   - readline
   - events
