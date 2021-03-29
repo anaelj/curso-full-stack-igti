@@ -42,6 +42,7 @@ app.listen(3000, async () => {
             nextId: 1,
             accounts: []
         }
+
         writeFile(global.fileName, JSON.stringify(initialJson)).then(() => { });
     }
 
