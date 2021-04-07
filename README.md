@@ -15,3 +15,8 @@ Repositório criado para o bootcamp IGTI => Full Stack ReactJS + NodeJS
   - api Bank
   - cors
   - swagger
+
+## Reacj JS
+ - es7
+ - npx create-react-app nomeprojeto
+ - components
