@@ -1,0 +1,61 @@
+Anaels-MacBook-Pro:~ Anael$ mongo --version
+Anaels-MacBook-Pro:~ Anael$ mongod
+> show dbs
+> use grades
+> db
+grades
+> db.createCollection("student",{})
+> show collectinos
+> db.createCollection("students",{})
+> db.students.insert({"name":"anael"})
+> db.student2.drop()
+> db.student.insertMany([{name: "Medeiros"},{name: "Mota", subject: "teste many"} ])
+> db.student.find()
+> db.student.find({},{_id:0})
+> db.student.find({},{_id:0, name: 1})
+> db.student.find({},{_id:0, name: 1}).limit(2)
+> db.student.find({},{_id:0, name: 1}).limit(2).skyp(1)
+> db.student.find({},{_id:0, name: 1}).limit(2).skip(1).sort({name: -1})
+> db.student.find({$and:[{name: "Anael"}]}, {_id:0}).pretty()
+> db.student.updateOne({name: "Medeiros"}, {$inc: {value: 10}})
+> db.student.updateOne({name: "Medeiros"}, {$set: {subject: "teste2 update"}})
+> db.student.updateMany({name: "Medeiros"}, {$inc: {value: 10}})
+> db.student.updateMany({}, {$currentDate: {lastModified: true, timestamp: {$type: "timestamp"}}})
+> db.student.updateMany({}, {$unset: {timestamp:1}})
+> db.student.deleteOne({name:"Medeiros"})
+> db.student.deleteMany({name:"Medeiros"})
+> db.student.bulkWrite([ 
+	{insertOne: {
+		"document" : {}
+	}},
+	{updateOne: {
+		"filter": {}
+		"update": {$set: {}}
+	}},
+    {deleteOne: {
+		"filter": {}
+	}},
+	{replaceOne: {
+		"filter" : {},
+		"replacement" : {}
+	}}
+	}], {ordered: false})
+
+	// indexes
+	> db.student.getIndexes()
+	> db.student.createIndex({name: -1})
+	> db.student.dropIndex({name: ""})
+	> db.student.dropIndexes()  --> apaga todos menos o index padrão
+    > db.student.createIndex({name: "text"})
+	> db.student.find({$text: {$search: "valor1 valor2 valor3 para pesquisa"}},{_id:0, autoria:1, score: {$meta: "textScore"}}).sort({score: {$meta: "textScore"}})
+
+	// agregação
+	> db.student.aggregate([
+		{$math: {campo: "x"}},
+		{$group: {_id: {subject: "$subject", type: "$type"}, total: {$sum: "$value"}}},
+		{$sort: {_id: 1}}
+	])
+
+	> db.student.countDocuments({name:"Medeiros"})
+
+	> db.student.distinct("name")
