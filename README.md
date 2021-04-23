@@ -21,3 +21,7 @@ Repositório criado para o bootcamp IGTI => Full Stack ReactJS + NodeJS
  - npx create-react-app nomeprojeto
  - components
  - flipMove (para efeito ao trocar posição dos cards)
+
+ ## Mongoose
+ - Atlas
+ - 

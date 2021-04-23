@@ -1,0 +1,12 @@
+{
+  "name": "mongose",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.12.5",
+    "mongose": "^0.0.2-security"
+ 
+  },
+  "type": "module"
+}
